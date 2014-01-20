@@ -2,8 +2,11 @@
 <resources>
 
     <string name="app_name">বইমেলা</string>
-    <string name="hello_world">Hello world!</string>
     <string name="search_hint">অনুসন্ধান</string>
-    
+    <string name="title">নাম</string>
+    <string name="author">লেখক</string>
+    <string name="publisher">প্রকাশনা</string>
+    <string name="category">বিভাগ</string>
+    <string name="price">মূল্য</string>
 
 </resources>
