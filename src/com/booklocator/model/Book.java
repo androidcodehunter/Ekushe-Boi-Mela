@@ -15,7 +15,6 @@ public class Book implements Serializable {
 	private String publisherInEnglish;
 	private double price;
 	private String description;
-	private Byte[] coverImage;
 
 	public long getIsbn() {
 		return isbn;
@@ -96,13 +95,4 @@ public class Book implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public Byte[] getCoverImage() {
-		return coverImage;
-	}
-
-	public void setCoverImage(Byte[] coverImage) {
-		this.coverImage = coverImage;
-	}
-
 }

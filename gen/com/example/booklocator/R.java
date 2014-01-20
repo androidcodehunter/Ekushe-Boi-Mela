@@ -953,18 +953,24 @@ containing a value of this type.
         public static final int abs__textButton=0x7f050013;
         public static final int abs__title=0x7f05001b;
         public static final int abs__up=0x7f05000b;
-        public static final int action_search=0x7f050034;
+        public static final int action_search=0x7f05003a;
+        public static final int author=0x7f050036;
+        public static final int cover=0x7f050033;
+        public static final int description=0x7f050039;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f050026;
         public static final int homeAsUp=0x7f050006;
+        public static final int linearLayout=0x7f050034;
         public static final int listMode=0x7f050002;
+        public static final int listView=0x7f050032;
         public static final int normal=0x7f050001;
-        public static final int one=0x7f050032;
+        public static final int price=0x7f050038;
+        public static final int publisher=0x7f050037;
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
         public static final int tabMode=0x7f050003;
-        public static final int two=0x7f050033;
+        public static final int title=0x7f050035;
         public static final int useLogo=0x7f050004;
         public static final int wrap_content=0x7f050000;
     }
@@ -994,8 +1000,9 @@ containing a value of this type.
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
         public static final int activity_search=0x7f030015;
-        public static final int sherlock_spinner_dropdown_item=0x7f030016;
-        public static final int sherlock_spinner_item=0x7f030017;
+        public static final int book_item=0x7f030016;
+        public static final int sherlock_spinner_dropdown_item=0x7f030017;
+        public static final int sherlock_spinner_item=0x7f030018;
     }
     public static final class menu {
         public static final int search=0x7f0c0000;

@@ -15,34 +15,37 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.ViewConfiguration;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
-import android.widget.TextView;
 
+import com.booklocator.adapter.BookAdapter;
 import com.booklocator.db.BookDatabaseHelper;
 import com.booklocator.interfaces.JsonTaskCompleteListener;
 import com.booklocator.model.Book;
 import com.booklocator.utilities.VolleyHelper;
 
 public class BookListActivity extends Activity implements OnQueryTextListener,
-		JsonTaskCompleteListener<JSONObject> {
+	JsonTaskCompleteListener<JSONObject> {
 	private static final String MOVIE_URL = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=atqyn9symqb65f3vps4tkv3z&page_limit=20";
 	private ArrayList<Book> books;
 	private BookDatabaseHelper bookDb;
+	private ListView listView;
+	private BookAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
-
+	
+		listView = (ListView) findViewById(R.id.listView);
+		
 		getOverflowMenu();
-		TextView tv = (TextView) findViewById(R.id.two);
-		tv.setText("I am hero");
 
 		VolleyHelper volleyHelper = VolleyHelper.getInstance(this, this);
 		volleyHelper.getJsonObject(MOVIE_URL);
 
-		bookDb = (BookDatabaseHelper) getApplication();
+		//bookDb = (BookDatabaseHelper) getApplication();
 
 	}
 
@@ -97,7 +100,7 @@ public class BookListActivity extends Activity implements OnQueryTextListener,
 		JSONArray jArray;
 		try {
 			jArray = result.getJSONArray("movies");
-			long isbn=0;
+			long isbn = 0;
 			for (int i = 0; i < jArray.length(); i++) {
 				JSONObject jsonBooks = jArray.getJSONObject(i);
 				Book book = new Book();
@@ -112,7 +115,9 @@ public class BookListActivity extends Activity implements OnQueryTextListener,
 				books.add(book);
 			}
 
-			bookDb.insertData(books);
+		refreshMovieList(books);
+			
+			//bookDb.insertData(books);
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -120,5 +125,12 @@ public class BookListActivity extends Activity implements OnQueryTextListener,
 		}
 
 	}
+	
+	private void refreshMovieList(ArrayList<Book> books) {
+		adapter = new BookAdapter(books, this);
+		listView.setAdapter(adapter);
+		adapter.forceReload();
+	}
+	
 
 }
