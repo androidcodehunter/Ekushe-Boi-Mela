@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.booklocator.activities.R;
 import com.booklocator.model.Book;
-import com.example.booklocator.R;
 
 public class BookAdapter extends BaseAdapter {
 
