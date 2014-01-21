@@ -2,38 +2,32 @@ package com.booklocator.activities;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.OnNavigationListener;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
-import android.widget.TwoLineListItem;
 
 import com.booklocator.adapter.BookAdapter;
 import com.booklocator.db.BookDatabaseHelper;
 import com.booklocator.interfaces.JsonTaskCompleteListener;
 import com.booklocator.model.Book;
 import com.booklocator.utilities.VolleyHelper;
-import com.example.booklocator.R;
 
 public class BookListActivity extends ActionBarActivity implements
 		JsonTaskCompleteListener<JSONObject> {
@@ -144,6 +138,8 @@ public class BookListActivity extends ActionBarActivity implements
 				bookIndex = books.indexOf(book);
 			}
 		}
+		
+		Log.d("best match", "" + books.get(bookIndex).getAuthor());
 	}
 
 	@Override
