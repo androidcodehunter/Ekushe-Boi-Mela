@@ -2,17 +2,24 @@
 <classpath>
 <<<<<<< HEAD
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-=======
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
->>>>>>> 45e6aa0242952e520f8d8c452f399d33710085c8
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+||||||| merged common ancestors
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+=======
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+>>>>>>> 5f3a943bf794549e0e71b9b3426b662d91d91413
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 <<<<<<< HEAD
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
 	<classpathentry exported="true" kind="lib" path="/android-support-v7-appcompat/libs/android-support-v7-appcompat.jar"/>
+||||||| merged common ancestors
 =======
->>>>>>> 45e6aa0242952e520f8d8c452f399d33710085c8
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+>>>>>>> 5f3a943bf794549e0e71b9b3426b662d91d91413
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
