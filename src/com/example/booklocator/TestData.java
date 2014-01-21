@@ -7,11 +7,10 @@ public class TestData {
 
 	public static List<Book> books = new ArrayList<Book>();
 	
-	public static void populate()
-	{
-		books.add(new Book("Humayun", "হুমায়ুন", "Voot", "ভূত", "200"));
-		books.add(new Book("Jafar", "জাফর", "Pret", "প্রেত", "250"));
-		books.add(new Book("Azad", "আজাদ", "Bangla", "বাংলা", "300"));
-		books.add(new Book("Anisul", "আনিসুল হক", "Kishor", "কিশোর", "150"));
+	static {
+		books.add(new Book("Humayun Ahmed", "হুমায়ুন আহমেদ", "Voot", "ভূত", "200"));
+		books.add(new Book("Jafar Iqbal", "জাফর ইকবাল", "Pret", "প্রেত", "250"));
+		books.add(new Book("Humayun Azad", "হুমায়ুন আজাদ", "Bangla", "বাংলা", "300"));
+		books.add(new Book("Anisul Haque", "আনিসুল হক", "Kishor", "কিশোর", "150"));
 	}
 }

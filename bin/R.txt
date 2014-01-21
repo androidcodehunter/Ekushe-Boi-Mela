@@ -240,7 +240,7 @@ int id action_context_bar 0x7f06001d
 int id action_menu_divider 0x7f060016
 int id action_menu_presenter 0x7f060017
 int id action_mode_close_button 0x7f060024
-int id action_search 0x7f06003f
+int id action_search 0x7f06003e
 int id activity_chooser_view_content 0x7f060025
 int id always 0x7f06000b
 int id beginning 0x7f060011
@@ -252,7 +252,6 @@ int id disableHome 0x7f060008
 int id dropdown 0x7f06000f
 int id edit_query 0x7f060030
 int id end 0x7f060013
-int id et_search_field 0x7f06003c
 int id expand_activities_button 0x7f060026
 int id expanded_menu 0x7f06002c
 int id home 0x7f060014
@@ -262,7 +261,7 @@ int id ifRoom 0x7f06000a
 int id image 0x7f060027
 int id listMode 0x7f060001
 int id list_item 0x7f060029
-int id lv_data_test 0x7f06003e
+int id lv_data_test 0x7f06003d
 int id middle 0x7f060012
 int id never 0x7f060009
 int id none 0x7f060010
@@ -284,7 +283,7 @@ int id shortcut 0x7f06002e
 int id showCustom 0x7f060007
 int id showHome 0x7f060004
 int id showTitle 0x7f060006
-int id spinner_price_range 0x7f06003d
+int id spinner_price_range 0x7f06003c
 int id split_action_bar 0x7f06001e
 int id submit_area 0x7f060039
 int id tabMode 0x7f060002
@@ -340,6 +339,7 @@ int string category 0x7f0b0012
 int string price 0x7f0b0013
 int string publisher 0x7f0b0011
 int string search_hint 0x7f0b000e
+int string search_icon 0x7f0b0014
 int string title 0x7f0b000f
 int style AppBaseTheme 0x7f0c0083
 int style AppTheme 0x7f0c0084

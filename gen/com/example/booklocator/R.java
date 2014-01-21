@@ -998,7 +998,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_search=0x7f06003f;
+        public static final int action_search=0x7f06003e;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;
@@ -1010,7 +1010,6 @@ containing a value of this type.
         public static final int dropdown=0x7f06000f;
         public static final int edit_query=0x7f060030;
         public static final int end=0x7f060013;
-        public static final int et_search_field=0x7f06003c;
         public static final int expand_activities_button=0x7f060026;
         public static final int expanded_menu=0x7f06002c;
         public static final int home=0x7f060014;
@@ -1020,7 +1019,7 @@ containing a value of this type.
         public static final int image=0x7f060027;
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
-        public static final int lv_data_test=0x7f06003e;
+        public static final int lv_data_test=0x7f06003d;
         public static final int middle=0x7f060012;
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
@@ -1042,7 +1041,7 @@ containing a value of this type.
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
-        public static final int spinner_price_range=0x7f06003d;
+        public static final int spinner_price_range=0x7f06003c;
         public static final int split_action_bar=0x7f06001e;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
@@ -1155,6 +1154,7 @@ containing a value of this type.
         public static final int price=0x7f0b0013;
         public static final int publisher=0x7f0b0011;
         public static final int search_hint=0x7f0b000e;
+        public static final int search_icon=0x7f0b0014;
         public static final int title=0x7f0b000f;
     }
     public static final class style {

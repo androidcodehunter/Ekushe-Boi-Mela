@@ -8,5 +8,6 @@
     <string name="publisher">প্রকাশনা</string>
     <string name="category">বিভাগ</string>
     <string name="price">মূল্য</string>
+    <string name="search_icon">search</string>
 
 </resources>
