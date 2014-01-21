@@ -35,52 +35,27 @@ import com.booklocator.model.Book;
 import com.booklocator.utilities.VolleyHelper;
 import com.example.booklocator.R;
 
-public class BookListActivity extends ActionBarActivity implements JsonTaskCompleteListener<JSONObject>{
+public class BookListActivity extends ActionBarActivity implements
+		JsonTaskCompleteListener<JSONObject> {
 
 	ActionBar actionBar;
 	SpinnerAdapter spinnerAdapter;
 	EditText searchBox;
 	Spinner priceRange;
-	ListView testBookList;
-	List<Book> bookList;
 	MenuItem searchItem;
 	private ArrayList<Book> books;
 	private BookDatabaseHelper bookDb;
 	private ListView listView;
 	private BookAdapter adapter;
 
+	private static final String MOVIE_URL = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=atqyn9symqb65f3vps4tkv3z&page_limit=20";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
-	
+
 		listView = (ListView) findViewById(R.id.listView);
-		
-		bookList = TestData.books;
-
-		ArrayAdapter<Book> bookDataAdapter = new ArrayAdapter<Book>(this,
-				android.R.layout.simple_list_item_2, bookList) {
-
-			@Override
-			public View getView(int position, View convertView, ViewGroup parent) {
-				TwoLineListItem row;
-				if (convertView == null) {
-					LayoutInflater inflater = (LayoutInflater) getApplicationContext()
-							.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-					row = (TwoLineListItem) inflater.inflate(
-							android.R.layout.simple_list_item_2, null);
-				} else {
-					row = (TwoLineListItem) convertView;
-				}
-				Book data = bookList.get(position);
-				row.getText1().setText(data.authorBang);
-				row.getText2().setText(data.titleBang);
-
-				return row;
-			}
-		};
-
-		testBookList.setAdapter(bookDataAdapter);
 
 		spinnerAdapter = ArrayAdapter.createFromResource(this,
 				R.array.search_types,
@@ -107,7 +82,8 @@ public class BookListActivity extends ActionBarActivity implements JsonTaskCompl
 
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-		actionBar.setListNavigationCallbacks(spinnerAdapter, navigationListener);
+		actionBar
+				.setListNavigationCallbacks(spinnerAdapter, navigationListener);
 		actionBar.setCustomView(R.layout.actionbar_search);
 		priceRange = (Spinner) actionBar.getCustomView().findViewById(
 				R.id.spinner_price_range);
@@ -118,7 +94,7 @@ public class BookListActivity extends ActionBarActivity implements JsonTaskCompl
 		VolleyHelper volleyHelper = VolleyHelper.getInstance(this, this);
 		volleyHelper.getJsonObject(MOVIE_URL);
 
-		//bookDb = (BookDatabaseHelper) getApplication();
+		// bookDb = (BookDatabaseHelper) getApplication();
 
 	}
 
@@ -161,13 +137,14 @@ public class BookListActivity extends ActionBarActivity implements JsonTaskCompl
 		double max = 0.0;
 		int bookIndex = 0;
 
-		for (Book book : bookList) {
-			double sim = EditDistance.similarity(book.authorEng, queryText);
+		for (Book book : books) {
+			double sim = EditDistance.similarity(book.getAuthor(), queryText);
 			if (sim > max) {
 				max = sim;
-				bookIndex = bookList.indexOf(book);
+				bookIndex = books.indexOf(book);
 			}
 		}
+	}
 
 	@Override
 	public void onJsonObject(JSONObject result) {
@@ -191,9 +168,9 @@ public class BookListActivity extends ActionBarActivity implements JsonTaskCompl
 				books.add(book);
 			}
 
-		refreshMovieList(books);
-			
-			//bookDb.insertData(books);
+			refreshMovieList(books);
+
+			// bookDb.insertData(books);
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -201,20 +178,10 @@ public class BookListActivity extends ActionBarActivity implements JsonTaskCompl
 		}
 
 	}
-	
+
 	private void refreshMovieList(ArrayList<Book> books) {
 		adapter = new BookAdapter(books, this);
 		listView.setAdapter(adapter);
 		adapter.forceReload();
-	}
-	
-
-		Log.d("best match", "" + bookList.get(bookIndex).authorBang);
-	}
-
-	@Override
-	public void onJsonObject(JSONObject result) {
-		// TODO Auto-generated method stub
-		
 	}
 }
