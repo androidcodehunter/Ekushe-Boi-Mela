@@ -16,6 +16,9 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
     }
+    public static final class array {
+        public static final int search_types=0x7f0d0000;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -995,16 +998,16 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_search=0x7f060043;
+        public static final int action_search=0x7f060044;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
-        public static final int author=0x7f06003f;
+        public static final int author=0x7f060040;
         public static final int beginning=0x7f060011;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
-        public static final int cover=0x7f06003d;
+        public static final int cover=0x7f06003e;
         public static final int default_activity_button=0x7f060028;
-        public static final int description=0x7f060042;
+        public static final int description=0x7f060043;
         public static final int dialog=0x7f06000e;
         public static final int disableHome=0x7f060008;
         public static final int dropdown=0x7f06000f;
@@ -1017,18 +1020,18 @@ containing a value of this type.
         public static final int icon=0x7f06002a;
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
-        public static final int linearLayout=0x7f06003e;
+        public static final int linearLayout=0x7f06003f;
         public static final int listMode=0x7f060001;
-        public static final int listView=0x7f06003c;
+        public static final int listView=0x7f06003d;
         public static final int list_item=0x7f060029;
         public static final int middle=0x7f060012;
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
-        public static final int price=0x7f060041;
+        public static final int price=0x7f060042;
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
-        public static final int publisher=0x7f060040;
+        public static final int publisher=0x7f060041;
         public static final int radio=0x7f06002f;
         public static final int search_badge=0x7f060032;
         public static final int search_bar=0x7f060031;
@@ -1044,6 +1047,7 @@ containing a value of this type.
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
+        public static final int spinner_price_range=0x7f06003c;
         public static final int split_action_bar=0x7f06001e;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
@@ -1102,12 +1106,13 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int activity_search=0x7f030017;
-        public static final int book_item=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int actionbar_search=0x7f030017;
+        public static final int activity_search=0x7f030018;
+        public static final int book_item=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
     }
     public static final class menu {
-        public static final int search=0x7f0d0000;
+        public static final int search=0x7f0e0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1151,8 +1156,13 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
         public static final int app_name=0x7f0b000d;
-        public static final int hello_world=0x7f0b000e;
-        public static final int search_hint=0x7f0b000f;
+        public static final int author=0x7f0b0010;
+        public static final int category=0x7f0b0012;
+        public static final int price=0x7f0b0013;
+        public static final int publisher=0x7f0b0011;
+        public static final int search_hint=0x7f0b000e;
+        public static final int search_icon=0x7f0b0014;
+        public static final int title=0x7f0b000f;
     }
     public static final class style {
         /** 
